@@ -1,0 +1,29 @@
+/*3. Write a function to compare two strings.*/
+
+#include<stdio.h>
+char cmp(char *str1,char *str2);
+int main()
+{
+char str1[20];
+char str2[20];
+printf("Enter the 1st string :");
+scanf("%s",str1);
+printf("Enter the 2nd string :");
+scanf("%s",str2);
+printf("Your string after comapare becomes: %d",cmp(str1,str2));
+return 0;
+}
+char cmp(char *str1,char *str2){
+   int camp=0;
+   camp=(str1-str2);
+   if(camp>0){
+       return 1;
+   }
+   else if(camp<0){
+    return -1;
+   }
+   else{
+    return 0;
+   }
+   
+}
