@@ -1,0 +1,33 @@
+/*6. Write a function to check whether a given string is an alphanumeric string or not.
+(Alphanumeric string must contain at least one alphabet and one digit)*/
+
+#include<stdio.h>
+void str_check(char *str);
+int main()
+{
+char str[20];
+printf("Enter the string :");
+fgets(str,20,stdin);
+str_check(&str[0]);
+return 0;
+}
+void str_check(char *str){
+   int count_str=0;
+   int count_digit=0;
+   for(int i=0;str[i];i++){
+      if(str[i]>='a' && str[i]<='z' || str[i]>='A' && str[i]<='Z'){
+         count_str=1;
+      }
+      if(str[i]>=48 && str[i]<=57){
+         count_digit=1;
+      }
+      
+      
+}
+if(count_str==1 && count_digit==1){
+   printf("Yes it is Alphanumeric string ");
+}
+else{
+   printf("Not a Alphanumric string ");
+}
+}
