@@ -1,0 +1,32 @@
+/*7. Write a function to check whether a given string is palindrome or not.*/
+
+#include<stdio.h>
+void palin(char *str,int n);
+int main()
+{
+char str[20];
+char string;
+int length=-1;
+printf("Enter the string :");
+fgets(str,20,stdin);
+for(int i=0;str[i];i++){
+   length++;
+}
+palin(str,length);
+
+
+return 0;
+}
+void palin(char *str,int n){
+   int i;
+   for(i=0;i<n;i++){
+      if(str[i]!=str[n-1-i]){
+         printf("No you dont enterned a palindrome string");
+         break;
+      }
+   }
+   if(n==i){
+      printf("Yes you have enterned a palindrome string");
+
+   }
+}
